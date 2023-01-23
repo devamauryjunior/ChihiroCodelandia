@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(154.76deg, #628E75 3%, #1A4855 84.12%);
+
+  animation-name: backgroudBody;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes backgroudBody {
+  from {
+    background: #628E75;
+  }
+
+  to {
+    background: #1A4855;
+  }
+}
