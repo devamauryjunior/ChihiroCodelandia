@@ -5,7 +5,16 @@
   height: 100%;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
 .imageChihiro {
+  height: 48vh;
   position: relative;
   animation-name: flutuando;
   animation-duration: 3s;
@@ -15,27 +24,49 @@
 }
 
 @keyframes flutuando {
-  0% {
-    bottom: 0;
+  from {
+    bottom: 15px;
+    
   }
 
-  25% {
-    bottom: 5px;
+  to {
+    bottom: -15px;
   }
 
-  50% {
-    bottom: 8px;
-  }
+}
 
-  75% {
-    bottom: -4px;
-  }
-
-  100% {
-    bottom: -7px;
-  }
+.ct {
+  width: 100%;
 }
 
 .watch {
   transform: skew(-24deg);
+}
+
+
+
+@media (min-width: 768px) {
+  .imageChihiro {
+    width: 90%;
+    height: 80vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row-reverse;
+  }
+
+  .ct {
+    width: 55%;
+  }
+
+  .ct-1 {
+    width: 100%;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3.9rem;
+  }
 }

@@ -5,9 +5,10 @@ import facebook from './assets/socialMedia/facebook.svg'
 import instagram from './assets/socialMedia/instagram.svg'
 import youtube from './assets/socialMedia/youtube.svg'
 import twitter from './assets/socialMedia/twitter.svg'
-import Play from './assets/play.svg'
-import IconButton from './components/IconButton'
+import IconButton from './components/IconButton/IconButton.jsx'
 import Chihiro from './assets/chihiro.svg'
+import PLayButton from './components/PLayButton'
+import Play from './assets/play.svg'
 
 function App() {
 
@@ -16,7 +17,6 @@ function App() {
     {name: instagram, link: "https://www.instagram.com/"},
     {name: twitter, link: "https://twitter.com/"},
     {name: youtube, link: "https://www.youtube.com/"}
-    
   ]
 
   return (
@@ -45,19 +45,12 @@ function App() {
           }
         </ul>
       </nav>
-      <div style={{
-        display: "flex",
-        alignItems: "center",
-        flexDirection: "column",
-        justifyContent: "center",
-        textAlign: "left",
-      }}>
-        <img className='imageChihiro' src={Chihiro} alt="Chihiro" style={{width: "90%"}} />
-        <div>
-          <div style={{
+      <div className='container'>
+        <img className='imageChihiro' src={Chihiro} alt="Chihiro" />
+        <div style={{width: "100%"}}>
+          <div className='ct' style={{
             textAlign: "left",
             color: "#FFF",
-            width: "100%"
           }}>
             <h2 style={{
               fontWeight: "700",
@@ -76,27 +69,14 @@ function App() {
               fontWeight: "400",
               fontSize: "1.4rem",
               paddingRight: "1.8rem",
-              marginBottom: "5rem"
+              marginBottom: "1.5rem"
             }}>Chihiro chega a um mundo mágico dominado por uma bruxa. Aqueles que a desobedecem são transformados em animais.</p>
           </div>
-          <button className='watch' style={{
-            width: "70%",
-            padding: "1rem 3.3rem 1rem 3rem",
-            display: 'flex',
-            alignItems: "center",
-            justifyContent: "center",
-            gap: "1rem",
-            textTransform: "uppercase",
-            background: "#658E76",
-            border: "none",
-            cursor: "pointer",
-            fontWeight: "500",
-            fontSize: "1.6rem",
-            color: "#FFF"
-          }}>
-            <img src={Play} alt="Play button" style={{width: "1.5rem"}}/>
-            ASSISTIR AGORA
-          </button>
+          <div className='ct-1'>
+            <PLayButton image={Play} buttonText="Assistir Agora"/>
+            <PLayButton buttonText="Assistir Agora"/>
+          </div>
+
         </div>
       </div>
     </div>
